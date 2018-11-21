@@ -1,0 +1,36 @@
+﻿<Window x:Class="UsbWatcher.AddDialogue"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsbWatcher"
+        mc:Ignorable="d"
+        Title="Add to known devices" Height="350" Width="500"
+        MinHeight="350" MinWidth="500">
+    <Grid>
+        <Grid x:Name="gridPopupInnerContentFields" Margin="10,10,10,0" Height="243" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="199*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="labelBoxName" Content="Name" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBoxName" Height="23" Margin="10,38,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text=""/>
+            <Label x:Name="labelBoxVid" Content="VID" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBoxVid" Height="23" Margin="10,91,418,0" TextWrapping="Wrap" VerticalAlignment="Top" Text=""/>
+            <Label x:Name="labelBoxPid" Content="PID" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBoxPid" Height="23" Margin="10,145,418,0" TextWrapping="Wrap" VerticalAlignment="Top" Text=""/>
+            <Label x:Name="labelMfg" Content="Manufacturer" Margin="59,66,322,140"/>
+            <Label x:Name="labelProd" Content="Product" Margin="59,119,322,86"/>
+            <TextBox x:Name="textBoxSuggestedMfg" Text="" Margin="59,91,10,0" Height="23" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBoxSuggestedProd" Text="" Margin="59,145,10,0" Height="23" VerticalAlignment="Top"/>
+            <Label x:Name="labelBoxPnPId" Content="PNPID" HorizontalAlignment="Left" Margin="10,173,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBoxPnpId" Height="23" Margin="10,199,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Text=""/>
+
+
+        </Grid>
+        <Grid x:Name="gridPopupInnerControls" Height="56" VerticalAlignment="Bottom" Margin="0,0,10,10" HorizontalAlignment="Right" Width="472">
+            <Button x:Name="buttonAddDialogueOk" Height="25" Width="90" Content="Add" Margin="277,21,0,10" Click="ButtonAddDialogueOk_Click" HorizontalAlignment="Left"/>
+            <Button x:Name="buttonAddDialogueCancel" Height="25" Width="90" Content="Cancel" Margin="372,21,0,10" Click="ButtonAddDialogueCancel_Click" HorizontalAlignment="Left"/>
+        </Grid>
+    </Grid>
+</Window>

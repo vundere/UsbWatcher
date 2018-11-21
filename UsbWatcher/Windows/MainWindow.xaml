@@ -1,0 +1,25 @@
+﻿<Window x:Class="UsbWatcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsbWatcher"
+        mc:Ignorable="d"
+        Title="USB Device Monitor" Height="800" Width="630.357">
+    <Grid>
+        <Grid x:Name="gridInnerMain" Margin="10,10,107,10">
+            <TreeView x:Name="treeEvents" Margin="10" SelectedItemChanged="TreeEvents_SelectedItemChanged">
+                <TreeView.Resources>
+                    <ContextMenu x:Key="ContextMenu" StaysOpen="True">
+                        <MenuItem Header="Copy"/>
+                    </ContextMenu>
+                </TreeView.Resources>
+            </TreeView>
+        </Grid>
+        <Grid x:Name="gridInnerControls" Margin="0,10,10,20" HorizontalAlignment="Right" Width="92">
+            <Button x:Name="buttonAddKnown" Content="Add" Height="30" Margin="0,10,0,0" Click="ButtonAddKnown_Click" VerticalAlignment="Top"/>
+            <Button x:Name="buttonRemoveKnown" Content="Remove" Height="30" Margin="0,45,0,0" Click="ButtonRemoveKnown_Click" VerticalAlignment="Top" IsEnabled="False"/>
+            <Button x:Name="buttonSettings" Content="Settings" Height="30" Margin="0,80,0,0" VerticalAlignment="Top" Click="ButtonSettings_Click"/>
+        </Grid>
+    </Grid>
+</Window>

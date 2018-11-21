@@ -1,0 +1,25 @@
+﻿<Window x:Class="UsbWatcher.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsbWatcher"
+        mc:Ignorable="d"
+        Title="Settings" Height="300" Width="250">
+    <Grid>
+        <Grid x:Name="gridInnerInfo" Margin="10,10,10,0" Height="160" VerticalAlignment="Top">
+            <Label x:Name="labelDb" Content="Database Status:" Margin="0,25,117,105"/>
+            <Label x:Name="labelFile" Content="Reference File:" Margin="0,55,117,75"/>
+            <Label x:Name="labelDownload" Content="Last updated:" Margin="0,85,117,45"/>
+
+            <Label x:Name="labelDbStatus" Content="" Margin="0,25,10,0" HorizontalAlignment="Right" Width="102" Height="30" VerticalAlignment="Top" HorizontalContentAlignment="Right"/>
+            <Label x:Name="labelFileStatus" Content="" Margin="0,55,10,0" HorizontalAlignment="Right" Width="102" Height="30" VerticalAlignment="Top" HorizontalContentAlignment="Right"/>
+            <Label x:Name="labelLastDownload" Content="" Margin="0,85,10,0" HorizontalAlignment="Right" Width="102" Height="30" VerticalAlignment="Top" HorizontalContentAlignment="Right"/>
+
+        </Grid>
+        <Grid x:Name="gridInnerControls" Margin="10,0,10,10" Height="84" VerticalAlignment="Bottom">
+            <Button x:Name="buttonUpdateDb" Height="25" Width="202" Content="Update DB" Margin="0,49,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Click="ButtonUpdateDb_Click"/>
+            <Button x:Name="buttonUpdateIdFile" Height="25" Width="202" Content="Download reference file" Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Click="ButtonUpdateIdFile_Click"/>
+        </Grid>
+    </Grid>
+</Window>
