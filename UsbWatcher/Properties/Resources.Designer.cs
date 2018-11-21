@@ -59,15 +59,5 @@ namespace UsbWatcher.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] usb {
-            get {
-                object obj = ResourceManager.GetObject("usb", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }
